@@ -57,9 +57,7 @@
         <div class="row" >
             <div class="col-md-12">
 
-                <!-- foreach kiyanne ek ek data eka loop karanawa kiyana eka.
-                ($errors->all() as $yourcapturederrors) karanne errors wala okkoma"all()" $yourcapturederrors kiyana ekata daganima.
-                {{" "}} eken samanyen krnne data output consol eke hri e wage mokaka hri developerta balaganimata display krna eka. -->
+                <!-- ($errors->all() as $yourcapturederrors) - get all errors into the "$yourcapturederrors" variable -->
                 @foreach ($errors->all() as $yourcapturederrors)
                     <div class="alert alert-danger" role="alert">
                         {{ $yourcapturederrors}}
@@ -78,7 +76,6 @@
                     <th>ID</th>
                     <th>TASK</th>
                     <th>COMPLETED</th>
-                    <th>Image</th>
 
                     @foreach ($arraytypevariabletasks as $tsk )
                         <tr>
@@ -91,9 +88,6 @@
                                     @else
                                     <button class="btn btn-warning">Not completed</button>
                                 @endif
-                            </td>
-                            <td>
-                                <img src="{{ asset('uploads/students/'.$item->profile_image) }}" width="70px" height="70px">
                             </td>
                         </tr>
                     @endforeach

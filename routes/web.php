@@ -24,7 +24,3 @@ Route::get('/tasks', function () {
 
 Route::post('/saveTask', 'App\Http\Controllers\TaskController@store');
 
-
-//image crud
-
-//Route::get('tasks', App\Http\Controllers\TaskController::class, 'store');
